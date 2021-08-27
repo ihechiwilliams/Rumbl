@@ -33,7 +33,7 @@ defmodule Rumbl.MultimediaTest do
       assert [%Video{id: ^id1}, %Video{id: ^id2}] = Multimedia.list_videos()
     end
 
-    test "get_videos!/1 returns the video with given id" do
+    test "get_video!/1 returns the video with given id" do
       owner = user_fixture()
       %Video{id: id} = video_fixture(owner)
       assert %Video{id: ^id} = Multimedia.get_video!(id)
